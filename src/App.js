@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Presentation from "./components/Parts/Presentation/main"
+import Portfolio from "./components/Parts/Portfolio/main"
+import AboutMe from "./components/Parts/AboutMe/main"
+import Knowledge from "./components/Parts/Knowledge/main"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Box } from "@material-ui/core";
+
+import { useStyles } from "./styles";
+
+const App = () => {
+    const classes = useStyles();
+    return (       
+        <Box component="div" className={classes.page}>
+            <Presentation/>
+             <Portfolio/>
+             <AboutMe/>
+             <Knowledge/>
+        </Box>
+    );
 }
 
 export default App;
